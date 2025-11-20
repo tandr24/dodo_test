@@ -15,7 +15,7 @@ public class TestBase {
     static void setupConfiguration() {
         Configuration.baseUrl = "https://yumesushi.rs";
         Configuration.pageLoadStrategy = "eager";
-       Configuration.remote = System.getProperty("remote");
+       Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,

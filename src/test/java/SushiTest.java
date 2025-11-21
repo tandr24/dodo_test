@@ -7,7 +7,7 @@ public class SushiTest extends TestBase {
     YumeData yumeData = new YumeData();
 
     @Test
-    void addItemToCart(){
+    void addItemToCart() {
         yumeSteps.openSite("/")
                 .chooseItem(yumeData.item)
                 .goToCart()
@@ -15,14 +15,14 @@ public class SushiTest extends TestBase {
     }
 
     @Test
-    void changeCityOnSite(){
+    void changeCityOnSite() {
         yumeSteps.openSite("/")
                 .chooseCity(yumeData.city)
                 .checkCity(yumeData.city);
     }
 
     @Test
-    void deleteItemFromCart(){
+    void deleteItemFromCart() {
         yumeSteps.openSite("/")
                 .chooseItem(yumeData.item)
                 .goToCart()
@@ -32,11 +32,21 @@ public class SushiTest extends TestBase {
     }
 
     @Test
-    void clearCart(){
+    void clearCart() {
         yumeSteps.openSite("/")
                 .chooseItem(yumeData.item)
                 .goToCart()
                 .removeAllItemFromCart()
                 .checkCartIsEmpty();
     }
+
+    @Test
+    void checkIfContactInfoExistsAndCorrect() {
+        yumeSteps.openSite("/")
+                .openTabAboutUs()
+                .chooseCityInTabAboutUs(yumeData.city)
+                .verifyContactInfo(yumeData.city);
+
+    }
+
 }

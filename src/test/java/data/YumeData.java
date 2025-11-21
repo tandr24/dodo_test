@@ -12,14 +12,11 @@ public class YumeData {
             "Filadelfija Premium",
             "Filadelfija Ebi",
             "Filadelfija Tuna",
-            "Filadelfija Tobiko",
-            "Kalifornija",
-            "Tokio",
-            "Vulkan"
+            "Filadelfija Tobiko"
     );
 
     public String city = faker.options().option(
-            "Novi Sad",
+            "NoviSad",
             "Beograd");
 
 }

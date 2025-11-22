@@ -22,8 +22,8 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-    //    Configuration.browser = System.getProperty("browser", "chrome");
-   //     Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
         Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
     }
 

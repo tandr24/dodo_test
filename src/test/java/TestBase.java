@@ -15,15 +15,15 @@ public class TestBase {
     static void setupConfiguration() {
         Configuration.baseUrl = "https://yumesushi.rs";
         Configuration.pageLoadStrategy = "eager";
-       Configuration.remote = System.getProperty("remote");
+        Configuration.remote = System.getProperty("remote");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+    //    Configuration.browser = System.getProperty("browser", "chrome");
+   //     Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
         Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
     }
 

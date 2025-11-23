@@ -1,28 +1,28 @@
-# Проект по автоматизации тестирования для сайта [Yume Sushi](https://yumesushi.rs/)
+# Test Automation Project for [Yume Sushi](https://yumesushi.rs/) website
 
-> Yume Sushi - лучшие суши в Сербии!
+> Yume Sushi - the best sushi in Serbia!
 
-## **Содержание:**
+## **Contents:**
 ____
 
-* <a href="#tools">Технологии и инструменты</a>
+* <a href="#tools">Technologies and tools</a>
 
-* <a href="#cases">Примеры автоматизированных тест-кейсов</a>
+* <a href="#cases">Examples of automated test cases</a>
 
-* <a href="#jenkins">Сборка в Jenkins</a>
+* <a href="#jenkins">Build in Jenkins</a>
 
-* <a href="#console">Запуск из терминала</a>
+* <a href="#console">Run from terminal</a>
 
-* <a href="#allure">Allure отчет</a>
+* <a href="#allure">Allure report</a>
 
-* <a href="#allure-testops">Интеграция с Allure TestOps</a>
+* <a href="#allure-testops">Integration with Allure TestOps</a>
 
-* <a href="#telegram">Уведомление в Telegram при помощи бота</a>
+* <a href="#telegram">Telegram notifications via bot</a>
 
-* <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
+* <a href="#video">Example videos of test execution on Selenoid</a>
 ____
 <a id="tools"></a>
-## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
+## <a name="Technologies and tools">**Technologies and tools:**</a>
 
 <p align="center">  
 <a href="https://www.jetbrains.com/idea/"><img src="images/logo/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>  
@@ -39,39 +39,39 @@ ____
 
 ____
 <a id="cases"></a>
-## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
+## <a name="Examples of automated test cases">**Examples of automated test cases:**</a>
 ____
-- ✓ *Добавление позиции в корзину*
-- ✓ *Смена города на сайте*
-- ✓ *Удаление позиции из корзины*
-- ✓ *Удаление всех позиций из корзины*
-- ✓ *Проверка, что раздел "о нас" содержит контактные данные*
+- ✓ *Adding an item to the cart*
+- ✓ *Changing the city on the site*
+- ✓ *Removing an item from the cart*
+- ✓ *Removing all items from the cart*
+- ✓ *Checking that the "About Us" section contains contact information*
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Build"></a>Build in [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/sushi_site/"><img src="images/screen/jenkins_build.jpeg" alt="Jenkins" width="950"/></a>  
 </p>
 
 
-### **Параметры сборки в Jenkins:**
+### **Build parameters in Jenkins:**
 
-- *browser (браузер, по умолчанию chrome)*
-- *browserVersion (версия браузера, по умолчанию 208.0)*
-- *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
+- *browser (browser, default chrome)*
+- *browserVersion (browser version, default 208.0)*
+- *browserSize (browser window size, default 1920x1080)*
+- *remoteUrl (login, password and address of the remote Selenoid server)*
 
 <a id="console"></a>
-## Команды для запуска из терминала
+## Commands for running from terminal
 ___
-***Локальный запуск:***
+***Local run:***
 ```bash  
 gradle clean test
 ```
 
-***Удалённый запуск через Jenkins:***
+***Remote run via Jenkins:***
 ```bash  
 clean test
 "-Dbrowser=${browser}"
@@ -81,32 +81,24 @@ clean test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/sushi_site/16/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [report](https://jenkins.autotests.cloud/job/sushi_site/16/allure/)</a>
 ___
 
-### *Основная страница отчёта*
+### *Main report page*
 
-<p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/mainPageAllure.jpeg" width="850">  
-</p>  
+<p align="center"> <img title="Allure Overview Dashboard" src="images/screen/mainPageAllure.jpeg" width="850"> </p>
 
-### *Тест-кейсы*
+### *Test cases*
 
-<p align="center">  
-<img title="Allure Tests" src="images/screen/AllureTests.jpeg" width="850">  
-</p>
+<p align="center"> <img title="Allure Tests" src="images/screen/AllureTests.jpeg" width="850"> </p>
 
-### *Графики*
+### *Charts*
 
-  <p align="center">  
-<img title="Allure Graphics" src="images/screen/allureGr1.jpeg" width="850">
-
-<img title="Allure Graphics" src="images/screen/allureGr2.jpeg" width="850">  
-</p>
+<p align="center"> <img title="Allure Graphics" src="images/screen/allureGr1.jpeg" width="850"> <img title="Allure Graphics" src="images/screen/allureGr2.jpeg" width="850"> </p>
 
 ___
 <a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/5018/dashboards">Allure TestOps</a>
+## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Integration with <a target="_blank" href="https://allure.autotests.cloud/project/5018/dashboards">Allure TestOps</a>
 ____
 ### *Allure TestOps Dashboard*
 
@@ -114,13 +106,13 @@ ____
 <img title="Allure TestOps Dashboard" src="images/screen/testOpsDashboard.jpeg" width="850">  
 </p>  
 
-### *Ручные тест-кейсы*
+### *Manual test cases*
 
 <p align="center">  
 <img title="Allure Tests" src="images/screen/testOpsManual.jpeg" width="850">  
 </p>
 
-### *Авто тест-кейсы*
+### *Automated test cases*
 
 <p align="center">  
 <img title="Allure TestOps Tests" src="images/screen/testOpsAuto.jpeg" width="850">  
@@ -128,7 +120,7 @@ ____
 
 ___
 <a id="jira"></a>
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1544">Jira</a>
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1544">Jira</a>
 ____
 <p align="center">  
 <img title="Jira" src="images/screen/jira.jpeg" width="850">  
@@ -136,7 +128,7 @@ ____
 
 ____
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Telegram notifications via bot
 ____
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/screen/TGBot.jpeg" width="550">  
@@ -144,7 +136,7 @@ ____
 
 ____
 <a id="video"></a>
-## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Example videos of test execution on Selenoid
 ____
 <p align="center">
 <img title="Selenoid Video" src="images/video/video.gif" width="550" height="350"  alt="video">   

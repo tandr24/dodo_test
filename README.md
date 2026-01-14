@@ -49,7 +49,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Build"></a>Build in [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Build"></a>Build in [Jenkins](https://jenkins.autotests.cloud/job/sushi_site/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/sushi_site/"><img src="images/screen/jenkins_build.jpeg" alt="Jenkins" width="950"/></a>  

@@ -1,3 +1,5 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -9,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 import helpers.Attachments;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     @BeforeAll
@@ -23,7 +27,7 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.browserVersion = System.getProperty("browserVersion", "128");
         Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
     }
 
@@ -35,6 +39,7 @@ public class TestBase {
             Attachments.browserConsoleLogs();
             Attachments.addVideo();
         }
+        closeWebDriver();
     }
 
     @BeforeEach

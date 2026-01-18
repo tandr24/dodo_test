@@ -1,6 +1,8 @@
 package tests;
 
 import data.YumeData;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.YumePage;
@@ -11,21 +13,35 @@ public class CartTests extends TestBase{
     CartPage cartPage = new CartPage();
 
     @Test
-    void deleteItemFromCart() {
+    @DisplayName ("Verify that item is deleted from cart")
+    @Owner("QA Team")
+    @Severity(SeverityLevel.CRITICAL)
+    @Epic("Cart Tests")
+    @Feature("Delete items from cart")
+    @Story("One item is deleted")
+    void deleteItemFromCartTest() {
         yumeSteps.openSite("/")
                 .chooseItem(yumeData.item);
         cartPage.goToCart()
                 .checkCart(yumeData.item)
                 .deleteItemFromCart(yumeData.item)
-                .checkCartIsEmpty();
+                .checkCartIsEmpty("Vaša korpa je prazna!");
     }
 
     @Test
-    void clearCart() {
+    @DisplayName ("Verify that all items are deleted from cart")
+    @Owner("QA Team")
+    @Severity(SeverityLevel.NORMAL)
+    @Epic("Cart Tests")
+    @Feature("Delete items from cart")
+    @Story("All items are deleted")
+    void clearCartTest() {
         yumeSteps.openSite("/")
                 .chooseItem(yumeData.item);
         cartPage.goToCart()
                 .removeAllItemFromCart()
-                .checkCartIsEmpty();
+                .checkCartIsEmpty("Vaša korpa je prazna!");
     }
 }
+
+//123qweQWE

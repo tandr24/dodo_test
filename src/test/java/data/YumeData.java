@@ -19,4 +19,14 @@ public class YumeData {
             "NoviSad",
             "Beograd");
 
+    public String phoneNumber(String city) {
+        String phoneNumber = "";
+        if (city.equals("Beograd")) {
+            phoneNumber = "+381612714798";
+        }
+        if (city.equals("Novi Sad")) {
+            phoneNumber = "+381614813011";
+        }
+        return phoneNumber;
+    }
 }

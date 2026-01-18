@@ -26,16 +26,16 @@ public class AboutUsPage {
     }
 
     @Step("Verify that contact info is correct")
-    public AboutUsPage verifyContactInfo(String city) {
+    public AboutUsPage verifyContactInfo(String city, String phoneNumber) {
         if (city.equals("Beograd")) {
             cityIntabAboutUsElement
                     .$(byText(city))
-                    .shouldHave(text("+381612714798"));
+                    .shouldHave(text(phoneNumber));
         }
         if (city.equals("Novi Sad")) {
             cityIntabAboutUsElement
                     .$(byText(city))
-                    .shouldHave(text("+381614813011"));
+                    .shouldHave(text(phoneNumber));
         }
         return this;
     }

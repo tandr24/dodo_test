@@ -28,6 +28,7 @@ dependencies {
     testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.17'
     testImplementation 'io.qameta.allure:allure-selenide:2.24.0'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.aeonbits.owner:owner:1.0.12'
 
 }
 

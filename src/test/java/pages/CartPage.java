@@ -39,8 +39,8 @@ public class CartPage {
     }
 
     @Step("Check that cart is empty")
-    public CartPage checkCartIsEmpty() {
-        classCart.shouldHave(text("Vaša korpa je prazna!"));
+    public CartPage checkCartIsEmpty(String expectedText) {
+        classCart.shouldHave(text(expectedText));
         return this;
     }
 

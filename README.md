@@ -46,6 +46,8 @@ ____
 - ✓ *Removing an item from the cart*
 - ✓ *Removing all items from the cart*
 - ✓ *Checking that the "About Us" section contains contact information*
+- ✓ *Login successfully with correct credentials*
+- ✓ *Unsuccessful login with empty password*
 
 ____
 <a id="jenkins"></a>
@@ -62,6 +64,9 @@ ____
 - *browserVersion (browser version, default 208.0)*
 - *browserSize (browser window size, default 1920x1080)*
 - *remoteUrl (login, password and address of the remote Selenoid server)*
+- *email (Email to log in)*
+- *password (password to log in)*
+
 
 <a id="console"></a>
 ## Commands for running from terminal

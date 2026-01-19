@@ -43,5 +43,3 @@ public class CartTests extends TestBase{
                 .checkCartIsEmpty("Vaša korpa je prazna!");
     }
 }
-
-//123qweQWE
